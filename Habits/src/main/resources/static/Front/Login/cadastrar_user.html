@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/CSS/cadastrar_user.css">
+    <title>Cadastrar</title>
+</head>
+<body>
+ <div id="divBody">
+
+        <form id="form" method="post" action="/cadastrar">
+            <!-- Parte da IMG -->
+            <div id="div_img">
+            
+             
+                 
+                <div class="moldura_img">
+                    <img src="../../src/img/perfil_padrao.png" class="img_perfil" alt="">
+                </div>
+
+            </div>
+
+
+            <!-- Parte do Formulário -->
+            <div id="div_formulario">
+                    <input type="text" class="campo_apelido" minminlength="0" maxlength="50" placeholder="Apelido" required>
+
+                    <input type="text" class="campo_email" placeholder="Email" minlength="0" maxlength="100" required>
+
+                    <input type="text" class="campo_senha" placeholder="Senha" minlength="0" maxlength="100" required>
+
+                    <input type="text" class="campo_senha_Confirm" placeholder="Senha Confirmar" minlength="0" maxlength="100" required>
+
+            </div>
+
+
+                <!-- Parte do botão -->
+            <div id="div_botao">
+                <button type="submit" id="botao_cadastrar">Cadastrar</button>
+
+                <a id="Tag_a" style="color: white;text-decoration: none;">Já tenho conta</a>
+            </div>
+
+
+        
+
+        </form>
+
+         <!-- Modal de Erro -->
+        <div id="overlay">
+
+            <div id="modal_Infor">
+
+                <div class="div_titulo">
+                        <h2 class="h2_titulo_modal">Informação</h2>
+                </div>
+
+                 <div class="div_texto">
+                       <p class="p_texto_modal"></p>
+                 </div> 
+                 
+                 <div class="div_botao">
+                    <button id="botao_modal_infor">OK</button>
+                 </div>
+
+            </div>
+        </div>
+        
+</div>
+<script src="../../src/JS/cadastrar_user.js"></script>
+</body>
+</html>

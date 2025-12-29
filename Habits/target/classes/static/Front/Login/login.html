@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../src/CSS/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="divBody">
+
+        <form id="form" method="post" action="/login">
+
+
+            <!-- Parte da IMG -->
+            <div id="div_img">
+                <!-- Moldura da img(círculo) -->
+                <div class="moldura_img">
+                    <img src="../../src/img/perfil_padrao.png" class="img_perfil" alt="">
+                </div>
+            </div>
+
+            <!-- Parte do Form -->
+            <div id="div_form">
+                <!-- Email -->
+                <input type="text" class="input_email" id="input_email" name="email" minlength="0" maxlength="50" placeholder="Email" required>
+
+                <!-- Div do campo senha -->
+                <div class="div_campo_senha">
+                    <!-- Senha -->
+                    <input type="password" class="input_senha" id="input_senha" name="senha" minlength="0" maxlength="50" placeholder="Senha" required>
+                    <div class="status_eye" id="status_eye">
+                        <img src="../../src/img/icones/eye-slash.svg" class="img_eye" alt="">
+                    </div>
+                </div>
+            </div>  
+
+            <!-- Parte do botão -->
+            <div id="div_botao">
+                <button type="submit" id="botao_entrar">ENTRAR</button>
+
+                <a id="Tag_a" style="  color: white;text-decoration: none;">Cadastre-se</a>
+            </div>
+
+        </form>
+        
+
+
+
+
+        <!-- Modal de Erro -->
+        <div id="overlay">
+
+            <div id="modal_Infor">
+
+                <div class="div_titulo">
+                        <h2 class="h2_titulo_modal">Informação</h2>
+                </div>
+
+                 <div class="div_texto">
+                       <p class="p_texto_modal"></p>
+                 </div> 
+                 
+                 <div class="div_botao">
+                    <button id="botao_modal_infor">OK</button>
+                 </div>
+
+            </div>
+        </div>
+        
+
+
+    </div>
+    <script src="../../src/JS/login.js"></script>
+</body>
+</html>
