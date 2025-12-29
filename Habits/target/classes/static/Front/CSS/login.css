@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+:root{
+    --cor_fundo:#2563EB;
+    --cor_moldura_img:#1a4cb7;
+}
+
+
+body,#divBody{
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    overflow-x: hidden;
+    overflow-Y: hidden;
+
+}
+form{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(70, 73, 73); */
+    background-color: var(--cor_fundo);
+}
+
+/*Parte da img*/
+
+#div_img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_perfil{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+}
+
+.moldura_img{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: var(--cor_moldura_img);
+    border-radius: 50%;
+    border:3px solid black;
+    
+}
+
+/*Parte do Formulário*/
+
+#div_form{
+    width: 100%;
+    height: 20%;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*Estilização do email*/
+.input_email{
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.div_campo_senha{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input_senha{
+    margin-top: 25px;
+    width: 60%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 55px;
+    font-size: 22px;
+}
+
+.status_eye{
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    width: 60px;
+    height: 55px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;   /* opcional, para indicar que é clicável */
+}
+
+.img_eye{
+    width: 50%;
+    height: 50%;
+}
+
+/*Botao*/
+
+#div_botao{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#botao_entrar{
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border:2px solid black;
+    font-size: 20px;
+
+}
+
+/*Parte do link*/
+
+#Tag_a{
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+/*Modal de erro*/
+#overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7); 
+    z-index: 9999;
+    display: none;
+}
+
+
+#modal_Infor{
+    margin: auto;
+    margin-top: 50%;
+    width: 90%;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid black;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.div_titulo{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    height: 35px;
+    background-color: #007bff;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    
+}
+
+.div_texto{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    width: 85%;
+    height: 100px;
+    font-size: 20px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+}
+
+.div_botao{
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 88%;
+    width: 85%;
+    height: 70px;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#botao_modal_infor{
+    width: 120px;
+    height: 45px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 18px;
+    margin-bottom: 8px;
+}

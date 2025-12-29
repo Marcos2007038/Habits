@@ -1,0 +1,153 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+:root{
+    --cor_fundo:#2563EB;
+    --cor_moldura_img:#1a4cb7;
+}
+
+
+body,#divBody{
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    overflow-x: hidden;
+    overflow-Y: hidden;
+
+}
+form{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(70, 73, 73); */
+    background-color: var(--cor_fundo);
+}
+
+/*Parte da img*/
+
+#div_img{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    /* background-color: blueviolet; */
+    align-items: center;
+    position: relative;
+}
+.img_perfil{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+}
+
+.moldura_img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: var(--cor_moldura_img);
+    border-radius: 50%;
+    border:3px solid black;
+    
+}
+
+
+.div_seta_esquerda{
+    position: absolute;
+    left:2%;
+    top: 30%;
+    z-index: 9999999;
+    width: 100px;
+    height: 180px;
+}
+.div_seta_direita{
+    position: absolute;
+    left:78%;
+    top: 30%;
+    z-index: 9999999;
+    width: 100px;
+    height: 190px;
+}
+
+.seta_esquerda{
+    width: 80%;
+    height: 80%;
+    transform: scaleX(-1);
+}
+.seta_direita{
+    width: 80%;
+    height: 80%;
+}
+
+
+
+/*Parte do Formulário*/
+
+#div_formulario{
+    width: 100%;
+    height: 280px;
+    margin-top: 15px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.campo_apelido,
+.campo_email,
+.campo_senha,
+.campo_senha_Confirm{
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+#div_botao{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #1a4cb7; */
+}
+
+
+
+
+#botao_cadastrar{
+    margin-top: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border:2px solid black;
+    font-size: 20px;
+
+}
+
+/*Parte do link*/
+
+#Tag_a{
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+
