@@ -1,13 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Hábitos</title>
     <link rel="stylesheet" href="../../src/CSS/home.css">
-    <title>Document</title>
-    
 </head>
 <body>
-    <h1>parte do Home</h1>
+
+    
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>Rastreamento de Hábitos</h1>
+        <span class="data">28/10/2025</span>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+        <!-- Cards de hábitos serão renderizados aqui pelo JS -->
+    </main>
+
+    <!-- HOTBAR -->
+    <nav class="hotbar">
+        <button class="hotbar-btn" id="homeBtn" >
+            <img src="../../src/img/icones/casa_home.png" alt="Home">
+        </button>
+
+        <button class="hotbar-btn add" id="addBtn" onclick="abrirModalHabito()">
+            <img src="../../src/img/icones/adicionar_habito.png" alt="Adicionar">
+        </button>
+
+        <button class="hotbar-btn " id="perfilBtn">
+            <img src="../../src/img/icones/perfil.png" alt="Perfil">
+        </button>
+    </nav>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="Modal_cadastrar_habito">
+    <div class="modal-box">
+
+        <header class="modal-header">
+            <h2>Novo Hábito</h2>
+            <button onclick="fecharModalHabito()">×</button>
+        </header>
+
+        <form class="modal-body" id="formHabito">
+    <label for="titulo">Nome do hábito</label>
+    <input type="text" id="titulo" placeholder="Ex: Beber água" required>
+
+    <label for="tag">Tag</label>
+    <select id="tag" required>
+
+        <option value="estudar" data-color="#4CAF50">Estudar</option>
+        <option value="treinar" data-color="#FF9800">Treinar</option>
+        <option value="saude" data-color="#E91E63">Saúde</option>
+        <option value="relacao" data-color="#9C27B0">Relação</option>
+        <option value="alimentacao" data-color="#8BC34A">Alimentação</option>
+        <option value="trabalho" data-color="#2196F3">Trabalho</option>
+        <option value="financas" data-color="#795548">Finanças</option>
+        <option value="espiritualidade" data-color="#3F51B5">Espiritualidade</option>
+        <option value="lazer" data-color="#00BCD4">Lazer</option>
+
+
+    </select>
+
+    <label for="descricao">Descrição</label>
+    <textarea id="descricao" placeholder="Ex: Beber 2L de água por dia"></textarea>
+
+    <label for="data">Data de início</label>
+    <input type="date" id="data" required>
+
+    <!-- NOVO BOTÃO DE REPETIR -->
+    <div class="repetir-container">
+        <input type="checkbox" id="repetir" />
+        <label for="repetir">Repetir este hábito automaticamente</label>
+    </div>
+
+    <button type="submit" class="btn-primary">Salvar Hábito</button>
+</form>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Tela de Configurações -->
+<div class="tela-config" id="telaConfig">
+    <div class="modal-box">
+
+        <!-- Botão de logout -->
+        <button class="btn-logout" id="btnLogout" onclick="Logout()">
+            <img src="../../src/img/icones/logout.png" alt="Sair" style="width: 30px;height: 30px;">
+        </button>
+
+        <!-- Perfil -->
+        <div class="perfil-container">
+            <div class="moldura-img">
+                <img src="../../src/img/perfil_padrao.png" class="img-perfil" alt="Perfil">
+            </div>
+            <h2 class="apelido">João Silva</h2>
+            <p class="email">joao.silva@email.com</p>
+        </div>
+
+        <!-- Gráfico de Pizza -->
+        <div class="grafico-container">
+            <h3>Distribuição de hábitos</h3>
+            <select id="filtroPizza">
+                <option value="todos">Todos</option>
+                <option value="dia">Dia</option>
+                <option value="semana">Semana</option>
+                <option value="mes" selected>Mês</option>
+                <option value="ano">Ano</option>
+            </select>
+            <canvas id="graficoPizza"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="../../src/JS/home.js"></script>
+<script src="../../src/JS/configuracao.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </body>
 </html>

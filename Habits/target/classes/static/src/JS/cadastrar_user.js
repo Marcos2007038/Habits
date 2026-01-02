@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 // const resultado = document.getElementById('resultado');
-console.log("kifdnfdn");
+
 form.addEventListener('submit', function(event) {
     event.preventDefault(); 
 
@@ -75,3 +75,11 @@ function mostrarInformacao(titulo,texto){
     });
 
 }
+
+
+
+
+
+
+
+

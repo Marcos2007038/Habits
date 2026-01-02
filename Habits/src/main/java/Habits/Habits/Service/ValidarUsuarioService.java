@@ -1,6 +1,5 @@
 package Habits.Habits.Service;
 
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +9,8 @@ import org.springframework.stereotype.Service;
 import Habits.Habits.DTO.CadastrarUserDTO;
 import Habits.Habits.Entity.Usuario;
 import Habits.Habits.Repository.UsuarioRepository;
+
+
 
 @Service
 public class ValidarUsuarioService {
